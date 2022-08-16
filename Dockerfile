@@ -19,5 +19,6 @@ RUN python -m pip install --user -r requirements.txt
 COPY --chown=algorithm:algorithm process.py /opt/algorithm/
 COPY --chown=algorithm:algorithm settings.py /opt/algorithm/
 COPY --chown=algorithm:algorithm grandchallenges/ /opt/algorithm/grandchallenges
+COPY --chown=algorithm:algorithm best_metric_model.pth /opt/algorithm/
 # COPY --chown=algorithm:algorithm isles/ /opt/algorithm/isles
 ENTRYPOINT python -m process $0 $@
