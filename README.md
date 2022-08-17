@@ -1,4 +1,11 @@
-# ISLES22 ATLAS: Sample Docker
+# AICONSlab - ISLES22 ATLAS
+
+This repository represents our lab's submission to the [ATLAS 2.0 segmentation challenge](https://atlas.grand-challenge.org/) (incorporated into ISLES at MICCAI 2022) for stroke lestion segmentation based on T1-weighted (T1w) imaging.
+
+In our solution, we used a patch-based 3D residual U-Net to segment stroke lesions using two input channels: one being the original T1w image, and another being the same image flipped symmetrically across the left-right axis. Given the often-unilateral nature of stroke lesions, incorporation of a symmetrically flipped channel – such that the model sees a patch from roughly the same region of each hemisphere – helped improve sensitivity and overall performance significantly.
+
+This repository was based on the [ATLAS 2.0 sample Docker](https://github.com/npnl/atlas_sample_docker). The text from the original README.md is maintained below for completeness:
+
 This repository serves as a template for your to produce a Docker container with your model.
 Your model should be trained and loadable at this stage.  
 There are three important files: for you to modify:
